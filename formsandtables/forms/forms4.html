@@ -3,29 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Forms Demo 3</title>
+    <title>Forms Demo 4</title>
 </head>
 <body>
     <h1>Forms demo</h1>
-    <form>
+    <form action ="google.com">
         <div>
             <label for = "username">Enter username:</label>
         <div></div>
         <input type = "text" id = "username" placeholder = "Enter username">
         </div>
+        
+        <!--a normal button a button always submits -->
+        <button>submit</button>
+        <!--this button wont submit due to the type being button-->
+        <button type = "button"> wont submit</button>
+        <!--this is a submit type button but done through input-->
+        <input type = "submit" value = "click me">
+
         <div>
             <label for = "password">Enter password:</label>
         <div></div>
         <input type = "password" id = "password" placeholder = "password">
         </div>
-
-        <!--alternative way to label albeit less common-->
-        <label>
-            Choose a colour:
-            <input type = "color" placeholder="choose colour">
-        </label>
         
     </form>
+    <!-- since this button is outside the form it wont work-->
+    <hr>
+    <button>outside form</button>
     
 </body>
 </html>
