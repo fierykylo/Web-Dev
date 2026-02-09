@@ -1,6 +1,7 @@
 h1
 {
-    color: green;
+    /* hex code */
+    color: #00008B;
 }
 
 h2
@@ -9,11 +10,13 @@ h2
 }
 
 p{
+    /* this is named colors */
     color: white;
     background-color: black;
 }
 
 button{
-    color:red;
+    /* added some rgb color not expected to know so ig just pick something from a color picker */
+    color:rgb(255, 0, 0); 
     background-color: pink;
 }
