@@ -1,0 +1,9 @@
+/* WRITE YOUR CODE IN HERE!!!!  */
+.square:nth-child(2n)
+{
+    background-color: red;
+}
+.square:nth-child(odd)
+{
+    background-color: black;
+}
