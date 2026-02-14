@@ -1,0 +1,19 @@
+body{
+    color:darkblue;
+}
+
+h1{
+    color:black;
+}
+section
+{
+    color : blue;
+}
+form{
+    color: blueviolet;
+}
+
+button{
+    color: inherit;
+}
+
