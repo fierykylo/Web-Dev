@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AQI Watch — Air Quality Monitor</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet"/>
+
+  <!-- Chart.js from CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+
+  <!-- Our CSS files -->
+  <link rel="stylesheet" href="css/reset.css"/>
+  <link rel="stylesheet" href="css/layout.css"/>
+  <link rel="stylesheet" href="css/components.css"/>
+  <link rel="stylesheet" href="css/theme.css"/>
+</head>
+<body>
+  <div class="dash">
+
+    <!-- Top bar -->
+    <div class="top-bar">
+      <div class="logo">AQI<span class="logo-accent">Watch</span></div>
+      <div class="live-badge">
+        <div class="pulse"></div>
+        Live monitoring
+      </div>
+    </div>
+
+    <!-- City selector tabs -->
+    <div class="city-tabs" id="cityTabs">
+      <!-- Injected by js/tabs.js -->
+    </div>
+
+    <!-- AQI hero section -->
+    <div class="aqi-hero">
+      <div class="aqi-main">
+        <div class="aqi-label">Air Quality Index</div>
+        <div class="aqi-number" id="aqiNum">—</div>
+        <div class="aqi-cat" id="aqiCat">Loading...</div>
+        <div class="aqi-trend" id="aqiTrend"></div>
+      </div>
+      <div class="pollutant-grid" id="pollGrid">
+        <!-- Injected by js/pollutants.js -->
+      </div>
+    </div>
+
+    <!-- Health advisory banner -->
+    <div class="health-box" id="healthBox">
+      <div class="health-title" id="healthTitle"></div>
+      <div class="health-desc"  id="healthDesc"></div>
+    </div>
+
+    <!-- 24-hour trend chart -->
+    <div class="section-title">24-hour AQI trend</div>
+    <div class="chart-wrap">
+      <canvas id="trendChart"></canvas>
+    </div>
+
+    <!-- Protective action tips -->
+    <div class="section-title">Protective actions</div>
+    <div class="tips-grid" id="tipsGrid">
+      <!-- Injected by js/tips.js -->
+    </div>
+
+    <!-- Quick-ask buttons -->
+    <div class="section-title" style="margin-top:1.5rem;">Ask for more insights</div>
+    <div class="ask-section" id="askSection">
+      <!-- Injected by js/askButtons.js -->
+    </div>
+
+    <div class="footer-note">
+      Data simulated for demo. In production, connect to
+      <a href="https://openaq.org" target="_blank">OpenAQ</a>,
+      <a href="https://app.cpcbccr.com/ccr/" target="_blank">CPCB India</a>,
+      or <a href="https://www.iqair.com/in-en/air-quality-api" target="_blank">IQAir API</a>
+      for live readings.
+    </div>
+
+  </div><!-- /.dash -->
+
+  <!-- Data layer first — everything else depends on it -->
+  <script src="data/cities.js"></script>
+  <script src="data/aqiLevels.js"></script>
+
+  <!-- Utility helpers -->
+  <script src="js/utils.js"></script>
+
+  <!-- UI modules -->
+  <script src="js/tabs.js"></script>
+  <script src="js/pollutants.js"></script>
+  <script src="js/health.js"></script>
+  <script src="js/chart.js"></script>
+  <script src="js/tips.js"></script>
+  <script src="js/askButtons.js"></script>
+
+  <!-- Main controller — runs last -->
+  <script src="js/app.js"></script>
+</body>
+</html>

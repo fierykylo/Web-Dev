@@ -1,0 +1,211 @@
+/*
+  theme.css
+  ─────────
+  ALL color and font declarations live here.
+  Light mode is the default; dark mode is inside
+  the @media (prefers-color-scheme: dark) block.
+
+  To change the look of the entire app, only edit this file.
+*/
+
+/* ── Fonts ── */
+body {
+  font-family: 'Syne', sans-serif;
+}
+
+/* ── Light mode (default) ── */
+body {
+  background-color: #f5f4f0;
+  color: #1a1a1a;
+}
+
+.logo {
+  color: #1a1a1a;
+}
+
+.logo-accent {
+  color: #e0533a;   /* brand red-orange */
+}
+
+.live-badge {
+  color: #888;
+}
+
+/* City tabs */
+.city-tab {
+  color: #888;
+  border-color: #ddd;
+}
+
+.city-tab.active {
+  background: #1a1a1a;
+  color: #fff;
+  border-color: #1a1a1a;
+}
+
+.city-tab:hover:not(.active) {
+  border-color: #aaa;
+  color: #1a1a1a;
+}
+
+/* AQI card */
+.aqi-main {
+  background: #fff;
+  border: 1px solid #e8e6e0;
+}
+
+.aqi-label  { color: #888; }
+.aqi-trend  { color: #888; }
+
+/* Pollutant cards */
+.poll-card {
+  background: #fff;
+  border: 1px solid #e8e6e0;
+}
+
+.poll-name { color: #888; }
+.poll-unit { color: #888; }
+
+.poll-bar-wrap {
+  background: #eee;
+}
+
+/* Chart area */
+.chart-wrap {
+  background: #fff;
+  border: 1px solid #e8e6e0;
+}
+
+/* Tips */
+.tip-card {
+  background: #fff;
+  border: 1px solid #e8e6e0;
+}
+
+.tip-label { color: #1a1a1a; }
+.tip-text  { color: #666; }
+
+/* Quick-ask area */
+.ask-section {
+  background: #fff;
+  border: 1px solid #e8e6e0;
+}
+
+.ask-btn {
+  color: #555;
+  border-color: #ddd;
+  background: transparent;
+}
+
+.ask-btn:hover {
+  background: #f5f4f0;
+  color: #1a1a1a;
+  border-color: #aaa;
+}
+
+/* Footer */
+.footer-note {
+  color: #aaa;
+  border-top: 1px solid #eee;
+}
+
+.footer-note a {
+  color: #e0533a;
+}
+
+/* Section labels */
+.section-title {
+  color: #888;
+}
+
+/* Health advisory — dynamic colors come from JS, these are fallbacks */
+.health-desc {
+  color: #555;
+}
+
+/* ── Dark mode ── */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #111;
+    color: #f0ede8;
+  }
+
+  .logo { color: #f0ede8; }
+
+  .live-badge { color: #666; }
+
+  .city-tab {
+    color: #666;
+    border-color: #333;
+  }
+
+  .city-tab.active {
+    background: #f0ede8;
+    color: #111;
+    border-color: #f0ede8;
+  }
+
+  .city-tab:hover:not(.active) {
+    border-color: #555;
+    color: #f0ede8;
+  }
+
+  .aqi-main {
+    background: #1c1c1c;
+    border-color: #2a2a2a;
+  }
+
+  .aqi-label  { color: #666; }
+  .aqi-trend  { color: #666; }
+
+  .poll-card {
+    background: #1c1c1c;
+    border-color: #2a2a2a;
+  }
+
+  .poll-name { color: #666; }
+  .poll-unit { color: #666; }
+
+  .poll-bar-wrap { background: #333; }
+
+  .chart-wrap {
+    background: #1c1c1c;
+    border-color: #2a2a2a;
+  }
+
+  .tip-card {
+    background: #1c1c1c;
+    border-color: #2a2a2a;
+  }
+
+  .tip-label { color: #f0ede8; }
+  .tip-text  { color: #888; }
+
+  .ask-section {
+    background: #1c1c1c;
+    border-color: #2a2a2a;
+  }
+
+  .ask-btn {
+    color: #888;
+    border-color: #333;
+    background: transparent;
+  }
+
+  .ask-btn:hover {
+    background: #222;
+    color: #f0ede8;
+    border-color: #555;
+  }
+
+  .footer-note {
+    color: #555;
+    border-color: #222;
+  }
+
+  .footer-note a { color: #e0533a; }
+
+  .section-title { color: #666; }
+
+  .health-desc { color: #aaa; }
+}
